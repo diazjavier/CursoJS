@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="./js/index.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <div id="container">
     <form action="https://google.com.ar" value="" style = "width: 300px" id="frmPersona">
 
         <fieldset>
@@ -17,23 +19,23 @@
             <table>
                 <tr>
                     <td> <label for="txtNombre">Nombre: </label></td>
-                    <td> <input type="text" name="nombre" id="txtNombre" placeholder="Ingrese su nombre"></td>
+                    <td> <input type="text" name="nombre" id="txtNombre" required minlength="3" placeholder="Ingrese su nombre"></td>
                 </tr>
                 <tr>
                     <td><label for="txtApellido">Apellido: </label></td>
-                    <td><input type="text" name="apellido" id="txtApellido" placeholder="Ingrese su apellido"></td>
+                    <td><input type="text" name="apellido" id="txtApellido" required placeholder="Ingrese su apellido"></td>
                 </tr>
                 <tr>
                     <td><label for="txtEdad">Edad: </label></td>
-                    <td><input type="text" name="edad" id="txtEdad" placeholder="Ingrese su edad"></td>
+                    <td><input type="number" name="edad" id="txtEdad" min="18" max="99" value="50" placeholder="Ingrese su edad"></td>
                 </tr>
                 <tr>
-                    <td><label for="rdoMasculino">Masculino </label></td>
-                    <td><input type="radio" name="genero" id="rdoMasculino" checked></td>
+                    <td><label for="rdoMasculino" checked>Masculino </label></td>
+                    <td><input type="radio" name="genero" value = "masculino" id="rdoMasculino" checked></td>
                 </tr>
                 <tr>
                     <td><label for="rdoFemenino">Femenino </label></td>
-                    <td><input type="radio" name="genero" id="rdoFemenino"></td>
+                    <td><input type="radio" name="genero" value = "femenino" id="rdoFemenino"></td>
                 </tr>
                 <tr>
                     <td><label for="chkManeja">Maneja?</label></td>
@@ -58,9 +60,67 @@
                     <td><input type="submit" value="Alta persona"></td>
                     <td></td>
                 </tr>
+
+                <tr>
+                    <td><input type="button" value="Limpiar" id="limpiador" onclick="limpiarFormulario()"></td>
+                    <td></td>
+                </tr>
+
             </table>
         </fieldset>
     </form>
+    <form action="https://google.com.ar" value="" style = "width: 300px" id="frmPersona2">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            <table>
+                <tr>
+                    <td> <label for="txtNombre2">Nombre: </label></td>
+                    <td> <input type="text" name="nombre" id="txtNombre2" placeholder="Ingrese su nombre"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtApellido2">Apellido: </label></td>
+                    <td><input type="text" name="apellido" id="txtApellido2" placeholder="Ingrese su apellido"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtEdad2">Edad: </label></td>
+                    <td><input type="text" name="edad" id="txtEdad2" placeholder="Ingrese su edad"></td>
+                </tr>
+                <tr>
+                    <td><label for="rdoMasculino2" checked>Masculino </label></td>
+                    <td><input type="radio" name="genero" value = "masculino" id="rdoMasculino2" checked></td>
+                </tr>
+                <tr>
+                    <td><label for="rdoFemenino2">Femenino </label></td>
+                    <td><input type="radio" name="genero" value = "femenino" id="rdoFemenino2"></td>
+                </tr>
+                <tr>
+                    <td><label for="chkManeja2">Maneja?</label></td>
+                    <td><input type="checkbox" name="maneja" id="chkManeja2"></td>
+                </tr>
+                <tr>
+                    <td><label for="chkNada2">Sabe nadar?</label></td>
+                    <td><input type="checkbox" name="nada" id="chkNada2"></td>
+                </tr>
+                <tr>
+                    <td><label for="selPais2">Pais:</label></td>
+                    <td><select name="pais" id="selPais2">
+                            <option value="ar">Argentina</option>
+                            <option value="uy">Uruguay</option>
+                            <option value="br">Brasil</option>
+                            <option value="cl">Chile</option>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Alta persona"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</div>
 </body>
 
 </html>
