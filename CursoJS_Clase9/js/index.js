@@ -51,7 +51,7 @@ function obtenerCiudades(arr, pais){
     return ciudades;
 }
 
-//Creo una nueva función para todos los Arrays que la invento yo
+//Creo una nueva función para todos los Arrays que la invento yo llamada "unique()"
 Array.prototype.unique = function(){
     //El objeto Set toma sólo los objetos distintos
     return [... new Set(this)];
